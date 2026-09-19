@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="鞋业新闻网为您提供最新的鞋业行业资讯、鞋材市场动态、品牌发布信息及鞋履设计趋势分析。涵盖运动鞋、皮鞋、童鞋等全品类鞋业发展动态。">
+    <meta name="keywords" content="鞋业新闻,鞋材市场,鞋履设计,运动鞋资讯,皮鞋品牌,鞋业动态">
+    <title>鞋业新闻-行业资讯与品牌动态追踪平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e1e4e8;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部样式 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--primary-color);
+            padding: 8px 0;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.3s;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: #f1f3f5;
+            padding: 6px 12px;
+            border-radius: 20px;
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            font-size: 14px;
+            color: var(--text-main);
+            width: 150px;
+        }
+
+        .search-box button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-secondary);
+        }
+
+        /* 首屏 Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 400px;
+            height: 400px;
+            background: rgba(230, 126, 34, 0.1);
+            border-radius: 50%;
+            transform: translate(30%, -30%);
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+        }
+
+        .stat-item h3 {
+            font-size: 32px;
+            color: var(--accent-color);
+            margin-bottom: 5px;
+        }
+
+        .stat-item span {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* 主体内容网格 */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        /* 新闻列表 */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 4px;
+            height: 20px;
+            width: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .news-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+        }
+
+        .news-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .news-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-meta {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 10px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .news-tag {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .news-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .news-excerpt {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            flex: 1;
+        }
+
+        .news-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .author {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .author-avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: #ddd;
+        }
+
+        .read-more {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* 侧边栏 */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .widget {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+
+        .hot-list {
+            list-style: none;
+        }
+
+        .hot-list li {
+            margin-bottom: 15px;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 15px;
+        }
+
+        .hot-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .hot-list a {
+            font-size: 14px;
+            font-weight: 500;
+            display: block;
+            line-height: 1.5;
+        }
+
+        .hot-list a:hover {
+            color: var(--accent-color);
+        }
+
+        .hot-index {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .hot-list li:nth-child(1) .hot-index { background: #e74c3c; }
+        .hot-list li:nth-child(2) .hot-index { background: #e67e22; }
+        .hot-list li:nth-child(3) .hot-index { background: #f1c40f; color: #333; }
+
+        .category-list {
+            list-style: none;
+        }
+
+        .category-list li {
+            margin-bottom: 10px;
+        }
+
+        .category-list a {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: var(--text-main);
+        }
+
+        .category-list a:hover {
+            background-color: #f8f9fa;
+            color: var(--accent-color);
+        }
+
+        .category-count {
+            background: #eee;
+            color: #666;
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 10px;
+        }
+
+        /* 市场板块 */
+        .market-section {
+            background-color: var(--card-bg);
+            padding: 40px 0;
+            margin-bottom: 60px;
+        }
+
+        .market-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .market-card {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.2s;
+        }
+
+        .market-card:hover {
+            border-color: var(--accent-color);
+        }
+
+        .market-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .market-price {
+            font-size: 18px;
+            color: #e74c3c;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .market-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            height: 40px;
+            overflow: hidden;
+        }
+
+        .market-btn {
+            display: block;
+            text-align: center;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .market-btn:hover {
+            background-color: #34495e;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--primary-color);
+            color: #bdc3c7;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h2 {
+            color: white;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-links li {
+            list-style: none;
+            margin-bottom: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 13px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 900px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-stats {
+                justify-content: center;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav-menu {
+                display: none;
+            }
+            .search-box {
+                display: none;
+            }
+            .hero-text h1 {
+                font-size: 28px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 头部导航 -->
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">鞋业<span>新闻</span></a>
+            <nav class="nav-menu">
+                <a href="#">首页</a>
+                <a href="#">行业资讯</a>
+                <a href="#">品牌动态</a>
+                <a href="#">市场分析</a>
+                <a href="#">展会信息</a>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索鞋业新闻...">
+                <button type="button">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 首屏 Hero -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>洞察全球鞋业趋势，掌握市场前沿动态</h1>
+                <p>为您提供最新的鞋材市场行情、品牌发布战略、智能制造技术及可持续发展报告，助力企业精准决策。</p>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>10,000+</h3>
+                    <span>每日更新资讯</span>
+                </div>
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <span>权威品牌合作</span>
+                </div>
+                <div class="stat-item">
+                    <h3>24h</h3>
+                    <span>实时快讯推送</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主体内容 -->
+    <main class="container">
+        <div class="main-grid">
+            <!-- 左侧新闻列表 -->
+            <div class="content-area">
+                <div class="section-header">
+                    <h2 class="section-title">最新行业资讯</h2>
+                    <a href="#" style="font-size: 14px; color: var(--accent-color);">查看更多 &gt;</a>
+                </div>
+
+                <!-- 新闻卡片 1 -->
+                <article class="news-card">
+                    <img src="https://picsum.photos/seed/shoes1/800/400" alt="智能制鞋生产线" class="news-image">
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span class="news-tag">智能制造</span>
+                            <span>2023-10-24</span>
+                            <span>阅读：2.3万</span>
+                        </div>
+                        <h3 class="news-title"><a href="#">2024年鞋业智能制造发展趋势报告：数字化如何重塑制鞋流程</a></h3>
+                        <p class="news-excerpt">随着工业4.0的深入发展，鞋业制造正迎来智能化转型。本文深入分析自动裁断、3D打印鞋模及智能缝纫机器人在生产中的应用现状与未来前景...</p>
+                        <div class="news-footer">
+                            <div class="author">
+                                <div class="author-avatar"></div>
+                                <span>产业观察家</span>
+                            </div>
+                            <a href="#" class="read-more">阅读全文</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 新闻卡片 2 -->
+                <article class="news-card">
+                    <img src="https://picsum.photos/seed/shoes2/800/400" alt="环保鞋材" class="news-image">
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span class="news-tag">绿色环保</span>
+                            <span>2023-10-23</span>
+                            <span>阅读：1.8万</span>
+                        </div>
+                        <h3 class="news-title"><a href="#">可持续材料成主流：生物基鞋底与再生皮革的市场机遇</a></h3>
+                        <p class="news-excerpt">面对消费者环保意识的提升，各大鞋企纷纷加大在可持续材料上的研发投入。本文探讨了生物基橡胶、再生聚酯纤维在高端鞋履产品中的应用案例。</p>
+                        <div class="news-footer">
+                            <div class="author">
+                                <div class="author-avatar"></div>
+                                <span>材料分析师</span>
+                            </div>
+                            <a href="#" class="read-more">阅读全文</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 新闻卡片 3 -->
+                <article class="news-card">
+                    <img src="https://picsum.photos/seed/shoes3/800/400" alt="运动鞋品牌" class="news-image">
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span class="news-tag">品牌动态</span>
+                            <span>2023-10-22</span>
+                            <span>阅读：5.1万</span>
+                        </div>
+                        <h3 class="news-title"><a href="#">头部运动品牌2024财年财报解读：跑步与篮球品类领跑增长</a></h3>
+                        <p class="news-excerpt">最新财报显示，主要运动鞋服品牌在亚太地区持续扩张。其中，轻量化跑鞋与专业篮球鞋成为各大品牌竞相角逐的核心品类，技术创新成为关键胜负手。</p>
+                        <div class="news-footer">
+                            <div class="author">
+                                <div class="author-avatar"></div>
+                                <span>市场研究员</span>
+                            </div>
+                            <a href="#" class="read-more">阅读全文</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 新闻卡片 4 -->
+                <article class="news-card">
+                    <img src="https://picsum.photos/seed/shoes4/800/400" alt="国际展会" class="news-image">
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span class="news-tag">展会资讯</span>
+                            <span>2023-10-21</span>
+                            <span>阅读：9,200</span>
+                        </div>
+                        <h3 class="news-title"><a href="#">2024中国国际鞋类、皮革工业展览会即将开幕，聚焦全球供应链</a></h3>
+                        <p class="news-excerpt">为期四天的鞋革展将于下月在上海举行，预计吸引来自全球30多个国家的参展商。展会将重点展示新材料、新工艺以及跨境电商的新渠道。</p>
+                        <div class="news-footer">
+                            <div class="author">
+                                <div class="author-avatar"></div>
+                                <span>展会策划</span>
+                            </div>
+                            <a href="#" class="read-more">阅读全文</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- 右侧侧边栏 -->
+            <aside>
+                <!-- 热门排行 -->
+                <div class="widget">
+                    <h3 class="section-title" style="font-size: 18px; margin-bottom: 15px;">今日热榜</h3>
+                    <ul class="hot-list">
+                        <li><a href="#"><span class="hot-index">1</span>耐克发布全新气垫技术，回弹性能提升40%</a></li>
+                        <li><a href="#"><span class="hot-index">2</span>安踏集团海外营收创新高，全球化布局见效</a></li>
+                        <li><a href="#"><span class="hot-index">3</span>2024年秋冬流行色彩预测：大地色系回归</a></li>
+                        <li><a href="#"><span class="hot-index">4</span>鞋企数字化转型痛点：数据孤岛如何打通？</a></li>
+                        <li><a href="#"><span class="hot-index">5</span>进口鞋材关税调整，对国内代工厂的影响分析</a></li>
+                    </ul>
+                </div>
+
+                <!-- 分类导航 -->
+                <div class="widget">
+                    <h3 class="section-title" style="font-size: 18px; margin-bottom: 15px;">栏目分类</h3>
+                    <ul class="category-list">
+                        <li><a href="#"><span>运动鞋资讯</span> <span class="category-count">328</span></a></li>
+                        <li><a href="#"><span>皮鞋与商务鞋</span> <span class="category-count">156</span></a></li>
+                        <li><a href="#"><span>童鞋市场</span> <span class="category-count">89</span></a></li>
+                        <li><a href="#"><span>鞋材与化工</span> <span class="category-count">210</span></a></li>
+                        <li><a href="#"><span>鞋机与设备</span> <span class="category-count">76</span></a></li>
+                        <li><a href="#"><span>设计师专栏</span> <span class="category-count">45</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- 营销推广位 -->
+                <div class="widget" style="background: linear-gradient(135deg, #e67e22, #d35400); color: white; text-align: center;">
+                    <h3 style="margin-bottom: 10px;">加入会员</h3>
+                    <p style="font-size: 13px; margin-bottom: 15px; opacity: 0.9;">获取独家行业报告与展会门票优惠</p>
+                    <button style="background: white; color: #d35400; border: none; padding: 8px 20px; border-radius: 4px; font-weight: bold; cursor: pointer;">立即注册</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- 鞋材市场行情 -->
+    <section class="market-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">热门鞋材行情</h2>
+                <a href="#" style="font-size: 14px; color: var(--accent-color);">进入市场中心 &gt;</a>
+            </div>
+            <div class="market-grid">
+                <div class="market-card">
+                    <h4 class="market-title">PU合成革</h4>
+                    <div class="market-price">¥ 12.5 / 米</div>
+                    <p class="market-desc">环保型PU合成革，透气性好，广泛应用于运动鞋中底与鞋面。</p>
+                    <a href="#" class="market-btn">查看详情</a>
+                </div>
+                <div class="market-card">
+                    <h4 class="market-title">EVA发泡材料</h4>
+                    <div class="market-price">¥ 8.2 / 公斤</div>
+                    <p class="market-desc">轻量化EVA颗粒，密度低，回弹性佳，适合高端跑鞋中底。</p>
+                    <a href="#" class="market-btn">查看详情</a>
+                </div>
+                <div class="market-card">
+                    <h4 class="market-title">超纤皮革</h4>
+                    <div class="market-price">¥ 25.0 / 平方米</div>
+                    <p class="market-desc">高性能超纤皮，耐磨耐刮，价格优于真皮，性价比高。</p>
+                    <a href="#" class="market-btn">查看详情</a>
+                </div>
+                <div class="market-card">
+                    <h4 class="market-title">橡胶底料</h4>
+                    <div class="market-price">¥ 15.8 / 公斤</div>
+                    <p class="market-desc">天然橡胶混合料，抓地力强，耐磨损，适用于户外鞋底。</p>
+                    <a href="#" class="market-btn">查看详情</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>鞋业新闻</h2>
+                    <p style="font-size: 14px; line-height: 1.8; opacity: 0.8;">
+                        专注鞋业领域，连接全球鞋业资讯与市场资源。我们致力于为鞋企提供最及时的行业动态、最专业的市场分析以及最全面的供应链服务。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">网站介绍</a></li>
+                        <li><a href="#">编辑团队</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>热门频道</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">品牌排行</a></li>
+                        <li><a href="#">展会日历</a></li>
+                        <li><a href="#">设计学院</a></li>
+                        <li><a href="#">招聘求职</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>友情链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">中国皮革协会</a></li>
+                        <li><a href="#">国际鞋业协会</a></li>
+                        <li><a href="#">全球鞋展网</a></li>
+                        <li><a href="#">鞋材在线</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 鞋业新闻网 版权所有 | 本站内容仅供学习交流，不代表本站立场</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
