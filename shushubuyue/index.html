@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>叔叔不约-高端绅士俱乐部与精选会员服务指南</title>
+    <meta name="description" content="叔叔不约平台致力于为资深绅士提供私密、安全、高品质的社交与娱乐服务。涵盖高端会所介绍、商务伴游预订、私密空间租赁及绅士生活指南，打造尊贵专属体验。">
+    <meta name="keywords" content="叔叔不约,高端会所,商务伴游,私密空间,绅士俱乐部,社交服务">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #d4af37;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #f8f8f8;
+            --bg-card: #ffffff;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1.2rem;
+            border-radius: var(--border-radius);
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--text-main);
+            background: transparent;
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background-color: #b5952f;
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+            color: #fff;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #ccc;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.1);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #ddd;
+        }
+
+        /* Services Section */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            height: 200px;
+            background-color: #eee;
+            position: relative;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-features {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-pill {
+            font-size: 0.75rem;
+            background: #f0f0f0;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            color: #555;
+        }
+
+        /* Membership / Guide Section */
+        .membership-section {
+            background-color: #fff;
+        }
+
+        .membership-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .membership-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .membership-list {
+            margin-bottom: 2rem;
+        }
+
+        .membership-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .check-icon {
+            color: var(--accent-color);
+            margin-right: 0.8rem;
+            margin-top: 4px;
+        }
+
+        .membership-image {
+            position: relative;
+        }
+
+        .membership-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: 20px 20px 0 var(--bg-body), 20px 20px 0 2px var(--accent-color);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: #f4f4f4;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .faq-item {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand p {
+            color: #999;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col a {
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .membership-container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">叔叔<span>不约</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#services">精选服务</a></li>
+                    <li><a href="#membership">会员权益</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline">登录</button>
+                <button class="btn btn-primary">立即咨询</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>尊享私密，从容不迫</h1>
+                <p>为资深绅士提供的高端社交与专属服务解决方案，拒绝喧嚣，只做懂生活的您。</p>
+                <div class="hero-tags">
+                    <span class="tag">高端会所</span>
+                    <span class="tag">商务伴游</span>
+                    <span class="tag">私密空间</span>
+                    <span class="tag">生活管家</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>专属服务体系</h2>
+                    <p>全方位满足您的商务、休闲与社交需求</p>
+                </div>
+                <div class="service-grid">
+                    <!-- Service 1 -->
+                    <article class="service-card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/club/400/250" alt="高端商务会所">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">顶级商务会所 <span style="font-size:0.8rem; color:#999;">VIP</span></h3>
+                            <p class="card-desc">配备专业商务团队，提供会议洽谈、高端宴请及私人管家服务，营造私密尊贵的商务洽谈环境。</p>
+                            <div class="card-features">
+                                <span class="feature-pill">私密洽谈</span>
+                                <span class="feature-pill">高端餐饮</span>
+                            </div>
+                            <a href="#" class="btn btn-outline" style="width:100%; text-align:center;">了解详情</a>
+                        </div>
+                    </article>
+
+                    <!-- Service 2 -->
+                    <article class="service-card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/guide/400/250" alt="商务伴游服务">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">商务伴游服务</h3>
+                            <p class="card-desc">经过严格筛选的精英伴游，不仅外形出众，更具备良好的谈吐与社交礼仪，助您在社交场合游刃有余。</p>
+                            <div class="card-features">
+                                <span class="feature-pill">形象管理</span>
+                                <span class="feature-pill">社交礼仪</span>
+                            </div>
+                            <a href="#" class="btn btn-outline" style="width:100%; text-align:center;">预约查看</a>
+                        </div>
+                    </article>
+
+                    <!-- Service 3 -->
+                    <article class="service-card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/room/400/250" alt="私密空间租赁">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">私密空间租赁</h3>
+                            <p class="card-desc">提供隐蔽、安全的独立空间，适合私人聚会、私密拍摄或休息放松，全天候安保服务。</p>
+                            <div class="card-features">
+                                <span class="feature-pill">24小时安保</span>
+                                <span class="feature-pill">高端影音</span>
+                            </div>
+                            <a href="#" class="btn btn-outline" style="width:100%; text-align:center;">查看房源</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Membership Section -->
+        <section id="membership" class="section membership-section">
+            <div class="container membership-container">
+                <div class="membership-content">
+                    <h2>会员尊享权益</h2>
+                    <p style="margin-bottom: 1.5rem; color: #666;">成为叔叔不约会员，您将获得超越普通用户的体验与服务支持。</p>
+                    <ul class="membership-list">
+                        <li class="membership-item">
+                            <span class="check-icon">✓</span>
+                            <span>全年无休的专属客服咨询通道，响应时间缩短至 10 分钟内</span>
+                        </li>
+                        <li class="membership-item">
+                            <span class="check-icon">✓</span>
+                            <span>优先预订顶级会所席位及私密空间，避开排队高峰</span>
+                        </li>
+                        <li class="membership-item">
+                            <span class="check-icon">✓</span>
+                            <span>定制化商务伴游推荐，根据您的行业与喜好精准匹配</span>
+                        </li>
+                        <li class="membership-item">
+                            <span class="check-icon">✓</span>
+                            <span>定期举办的高端私享沙龙，拓展优质人脉圈层</span>
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary">申请成为会员</button>
+                </div>
+                <div class="membership-image">
+                    <img src="https://picsum.photos/seed/luxury/500/600" alt="会员尊享场景">
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见服务指南</h2>
+                    <p>关于服务流程、预订方式及安全隐私的解答</p>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <span class="faq-question">如何进行服务预订？</span>
+                        <p class="faq-answer">您可以通过官网在线提交需求，或直接拨打官方客服电话。我们的客服人员会在 24 小时内与您联系，确认具体细节并完成预约。</p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">服务费用包含哪些内容？</span>
+                        <p class="faq-answer">所有服务报价均为公开透明价，包含基础服务费。具体包含项目（如餐饮、交通、陪同时长等）会在预订确认单中详细列明。</p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">如何保障隐私安全？</span>
+                        <p class="faq-answer">我们承诺对客户的个人信息及行程安排严格保密。所有员工均签署严格的保密协议，系统采用加密技术保护数据安全。</p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">是否支持异地预订？</span>
+                        <p class="faq-answer">支持。我们拥有覆盖多个城市的合作网络，可为您提供跨城市的异地服务安排与协调。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">叔叔<span>不约</span></a>
+                    <p>致力于为追求品质生活的绅士提供最专业的社交服务支持，诚信经营，安全至上。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">服务介绍</a></li>
+                        <li><a href="#">会员中心</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>服务项目</h4>
+                    <ul>
+                        <li><a href="#">高端会所</a></li>
+                        <li><a href="#">商务伴游</a></li>
+                        <li><a href="#">私密空间</a></li>
+                        <li><a href="#">私人管家</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">电话：400-123-4567</a></li>
+                        <li><a href="#">邮箱：service@uncle-nomatch.com</a></li>
+                        <li><a href="#">工作时间：09:00 - 22:00</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 叔叔不约 版权所有. 仅供18岁以上成年人浏览使用，请遵守当地法律法规。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
