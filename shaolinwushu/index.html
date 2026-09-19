@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>少林武术操-校园推广与教学标准指南</title>
+    <meta name="description" content="少林武术操官方教学指南，包含全套动作分解、教学视频、学校推广方案及武术操与传统武术的关联解析。提供规范的动作标准与练习建议。">
+    <meta name="keywords" content="少林武术操,学校武术操,传统武术教学,校园体育活动,少林基本功">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513; /* SaddleBrown - 鞍褐色，代表木/禅 */
+            --secondary-color: #D2691E; /* Chocolate - 巧克力色，代表活力 */
+            --accent-color: #F4A460; /* SandyBrown - 沙褐色，代表沙/地 */
+            --bg-color: #FAF9F6; /* OldLace - 老lace，米白色背景 */
+            --text-main: #333333;
+            --text-light: #666666;
+            --white: #FFFFFF;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            border: 2px solid var(--primary-color);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0wIDQwaDQwVjBIMHY0MHptMjAtMjBWMjBoMjB2MjBIMjB6TTIwIDIwdjIwaDIwVjIwSDIweiIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIwLjA1Ii8+PC9nPjwvc3ZnPg==');
+            opacity: 0.1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--white);
+            color: var(--primary-color);
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            background-color: var(--accent-color);
+        }
+
+        /* 介绍区域 */
+        .intro {
+            padding: 60px 0;
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .intro-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .intro-text p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        .intro-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* 核心内容：动作分解 */
+        .moves-section {
+            padding: 80px 0;
+            background-color: var(--bg-color);
+        }
+
+        .moves-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .move-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .move-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .move-img {
+            width: 100%;
+            height: 200px;
+            background-color: #eee;
+            position: relative;
+        }
+
+        .move-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .move-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .move-content {
+            padding: 25px;
+        }
+
+        .move-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .move-content p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .tags span {
+            display: inline-block;
+            background-color: #f0f0f0;
+            color: #666;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+        }
+
+        /* 教学要点 */
+        .tips-section {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .tips-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .tips-list {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .tips-list li {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .tips-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .tips-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .tips-content p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .tips-visual {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--bg-color);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+
+        .tips-visual img {
+            max-width: 100%;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        /* FAQ */
+        .faq-section {
+            padding: 80px 0;
+            background-color: var(--bg-color);
+        }
+
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        }
+
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            padding-left: 20px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>武</span> 少林武术操
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#intro">简介</a></li>
+                    <li><a href="#moves">动作分解</a></li>
+                    <li><a href="#tips">教学要点</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>少林武术操</h1>
+                <p>传承千年武魂，强健体魄，磨炼意志。专为校园推广设计的标准化武术操体系。</p>
+                <a href="#moves" class="btn">查看动作标准</a>
+            </div>
+        </section>
+
+        <!-- Intro Section -->
+        <section id="intro" class="intro">
+            <div class="container">
+                <div class="intro-grid">
+                    <div class="intro-text">
+                        <h3>什么是少林武术操？</h3>
+                        <p>少林武术操是将少林传统武术的基本功法、套路精华与广播体操的编排形式相结合的一种新型体育项目。它不仅保留了武术刚劲有力、动作舒展的特点，还注重动作的整齐划一和韵律感。</p>
+                        <p>这种形式非常适合在学校、企业及社区中推广，能够让练习者在短时间内掌握武术的基本要领，达到强身健体、防身自卫的目的，同时弘扬中华传统武术文化。</p>
+                        <p>少林武术操通常包含桩功、手型、步法以及简单的对练动作，全套动作结构严谨，节奏鲜明。</p>
+                    </div>
+                    <div class="intro-image">
+                        <!-- 使用 picsum 作为占位图，实际使用时应替换为武术操教学图片 -->
+                        <img src="https://picsum.photos/seed/martialarts/600/400" alt="少林武术操练习场景">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Moves Section -->
+        <section id="moves" class="moves-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>核心动作分解</h2>
+                    <p>少林武术操由多个章节组成，每个章节侧重不同的基本功训练。</p>
+                </div>
+                <div class="moves-grid">
+                    <article class="move-card">
+                        <div class="move-img">
+                            <span class="move-badge">第一章</span>
+                            <img src="https://picsum.photos/seed/move1/400/300" alt="起势与马步">
+                        </div>
+                        <div class="move-content">
+                            <h3>马步冲拳</h3>
+                            <p>马步冲拳是少林武术操的基础，要求两脚开立，大腿平齐，上身挺直，拳眼向上。</p>
+                            <div class="tags">
+                                <span>步法</span>
+                                <span>力量</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="move-card">
+                        <div class="move-img">
+                            <span class="move-badge">第二章</span>
+                            <img src="https://picsum.photos/seed/move2/400/300" alt="弓步推掌">
+                        </div>
+                        <div class="move-content">
+                            <h3>弓步推掌</h3>
+                            <p>弓步为实战中常用步型，推掌时需沉肩坠肘，力达掌根，展现出武术的攻防含义。</p>
+                            <div class="tags">
+                                <span>步法</span>
+                                <span>发力</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="move-card">
+                        <div class="move-img">
+                            <span class="move-badge">第三章</span>
+                            <img src="https://picsum.photos/seed/move3/400/300" alt="虚步亮掌">
+                        </div>
+                        <div class="move-content">
+                            <h3>虚步亮掌</h3>
+                            <p>虚步要求重心后移，一腿屈膝半蹲，另一腿脚尖点地，亮掌时双臂环抱，展现平衡之美。</p>
+                            <div class="tags">
+                                <span>平衡</span>
+                                <span>协调</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="move-card">
+                        <div class="move-img">
+                            <span class="move-badge">第四章</span>
+                            <img src="https://picsum.photos/seed/move4/400/300" alt="仆步穿掌">
+                        </div>
+                        <div class="move-content">
+                            <h3>仆步穿掌</h3>
+                            <p>仆步要求全蹲，腿伸直，穿掌动作要求快速有力，眼神随之移动，极具爆发力。</p>
+                            <div class="tags">
+                                <span>柔韧</span>
+                                <span>速度</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section id="tips" class="tips-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>教学与练习要点</h2>
+                    <p>掌握正确的练习方法，才能事半功倍，避免运动损伤。</p>
+                </div>
+                <div class="tips-container">
+                    <ul class="tips-list">
+                        <li>
+                            <div class="tips-icon">1</div>
+                            <div class="tips-content">
+                                <h4>身法端正</h4>
+                                <p>练习少林武术操时，始终保持“三直一正”（头直、身直、腿直、身正），切忌含胸驼背。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tips-icon">2</div>
+                            <div class="tips-content">
+                                <h4>呼吸配合</h4>
+                                <p>动作与呼吸要协调一致，发力时呼气，还原时吸气，形成“外动内静”的呼吸节奏。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tips-icon">3</div>
+                            <div class="tips-content">
+                                <h4>循序渐进</h4>
+                                <p>初学者应先分解练习单个动作，熟悉定型后再连贯练习，避免急于求成导致动作变形。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tips-icon">4</div>
+                            <div class="tips-content">
+                                <h4>热身充分</h4>
+                                <p>正式开始前务必进行充分的热身运动，重点活动膝关节、踝关节和腰部，防止拉伤。</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="tips-visual">
+                        <img src="https://picsum.photos/seed/teacher/500/350" alt="武术操教学指导">
+                        <h4>专业指导的重要性</h4>
+                        <p style="font-size: 0.9rem; color: #666;">建议由专业教练或体育教师进行指导，纠正细微动作偏差，确保动作标准。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">少林武术操适合多大年龄的人群？</div>
+                        <div class="faq-answer">少林武术操适合中小学生、大学生以及企事业单位员工练习。对于儿童，建议在家长或老师指导下进行，根据年龄调整动作难度和强度。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">练习少林武术操能防身吗？</div>
+                        <div class="faq-answer">少林武术操以健身和修身养性为主，虽然包含了武术的基本攻防原理，但并非实战格斗训练。它主要锻炼的是身体的协调性、爆发力和反应能力。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">没有武术基础可以学吗？</div>
+                        <div class="faq-answer">完全可以。少林武术操的设计初衷就是为了普及武术文化，动作编排相对简单，适合零基础的初学者练习。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">每天练习多长时间为宜？</div>
+                        <div class="faq-answer">建议每天练习20-30分钟，每周坚持3-4次。过度练习可能导致肌肉疲劳或关节损伤，应根据身体承受能力合理安排。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于少林武术操</h4>
+                    <p>致力于推广传统武术与现代体育教育相结合，让更多人了解并喜爱少林功夫。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#intro">项目简介</a></li>
+                        <li><a href="#moves">动作图解</a></li>
+                        <li><a href="#tips">教学视频</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关资源</h4>
+                    <ul>
+                        <li><a href="#">武术操音乐下载</a></li>
+                        <li><a href="#">学校推广方案</a></li>
+                        <li><a href="#">教练培训课程</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 少林武术操推广中心. 保留所有权利. 仅供学习交流使用。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
