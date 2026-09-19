@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="冒险小王子全集在线阅读，介绍《冒险小王子》动漫、漫画及小说剧情，收录经典章节与角色介绍，提供正版阅读指南。">
+    <meta name="keywords" content="冒险小王子全集,冒险小王子,于果,精灵,伊拉,汤姆,正版漫画">
+    <title>冒险小王子全集-正版漫画阅读与剧情解析平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff6b35;
+            --secondary-color: #f7c59f;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-body: #fdfbf7;
+            --bg-card: #ffffff;
+            --border-radius: 12px;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+            --shadow-md: 0 8px 24px rgba(255, 107, 53, 0.15);
+            --font-main: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-body);
+            color: var(--text-dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-card);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-btn {
+            background: none;
+            border: 1px solid #eee;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #fff5eb 0%, #ffffff 100%);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .hero h1 .highlight {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Main Content Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        /* Section Titles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        /* Comic Grid */
+        .comic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .comic-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .comic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-cover {
+            width: 100%;
+            height: 280px;
+            background-color: #eee;
+            position: relative;
+        }
+
+        .card-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .card-info {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            margin-top: auto;
+        }
+
+        .read-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Sidebar */
+        aside .sidebar-widget {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 30px;
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .rank-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .rank-num {
+            width: 24px;
+            height: 24px;
+            background: #eee;
+            color: #666;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .rank-list li:nth-child(1) .rank-num { background: #ff6b35; color: white; }
+        .rank-list li:nth-child(2) .rank-num { background: #f7c59f; color: #2c3e50; }
+        .rank-list li:nth-child(3) .rank-num { background: #e0e0e0; color: #2c3e50; }
+
+        .intro-text {
+            font-size: 0.95rem;
+            color: #555;
+            text-align: justify;
+        }
+
+        /* Character Section */
+        .char-section {
+            background: white;
+            padding: 60px 0;
+            margin-top: 40px;
+            border-top: 1px solid #eee;
+        }
+
+        .char-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .char-item {
+            text-align: center;
+        }
+
+        .char-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            background-color: #eee;
+            overflow: hidden;
+            border: 3px solid var(--secondary-color);
+        }
+
+        .char-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .char-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .char-role {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 50px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-col p {
+            font-size: 0.9rem;
+            color: #bdc3c7;
+            margin-bottom: 10px;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #34495e;
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .main-layout { grid-template-columns: 1fr; }
+            .header-inner { flex-direction: column; height: auto; padding: 15px 0; gap: 15px; }
+            nav ul { gap: 15px; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                <span>冒险小王子</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">漫画连载</a></li>
+                    <li><a href="#">角色图鉴</a></li>
+                    <li><a href="#">周边商城</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn">搜索</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>探索 <span class="highlight">冒险小王子全集</span> 的奇幻世界</h1>
+                <p>跟随于果的脚步，穿越神秘的精灵星球，结识志同道合的伙伴，揭开关于勇气、友谊与成长的动人篇章。</p>
+                <div class="cta-group">
+                    <a href="#latest" class="btn btn-primary">开始阅读</a>
+                    <a href="#intro" class="btn btn-secondary">剧情简介</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container main-layout">
+            <!-- Left Content -->
+            <div class="content-area">
+                <!-- Latest Updates -->
+                <section id="latest" class="section">
+                    <div class="section-header">
+                        <h2 class="section-title">最新连载</h2>
+                        <a href="#" style="font-size:0.9rem; color:var(--primary-color);">查看更多 &rarr;</a>
+                    </div>
+                    <div class="comic-grid">
+                        <!-- Card 1 -->
+                        <article class="comic-card">
+                            <div class="card-cover">
+                                <img src="https://picsum.photos/seed/boy1/300/400" alt="冒险小王子封面">
+                                <span class="card-tag">更新中</span>
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">第1024章：迷雾森林的呼唤</h3>
+                                <p class="card-meta">于果 · 精灵星球</p>
+                                <p class="card-desc">迷雾再次笼罩了精灵森林，古老的封印似乎在蠢蠢欲动，于果必须带领伙伴们寻找失落的线索。</p>
+                                <div class="card-footer">
+                                    <a href="#" class="read-link">立即阅读 &rarr;</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article class="comic-card">
+                            <div class="card-cover">
+                                <img src="https://picsum.photos/seed/boy2/300/400" alt="冒险小王子封面">
+                                <span class="card-tag">热门</span>
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">第1023章：汤姆的秘密基地</h3>
+                                <p class="card-meta">汤姆 · 虚空星系</p>
+                                <p class="card-desc">汤姆为了寻找关于父亲失踪的线索，独自前往危险的虚空星系边缘，却意外发现了一个惊人的秘密。</p>
+                                <div class="card-footer">
+                                    <a href="#" class="read-link">立即阅读 &rarr;</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article class="comic-card">
+                            <div class="card-cover">
+                                <img src="https://picsum.photos/seed/boy3/300/400" alt="冒险小王子封面">
+                                <span class="card-tag">新章</span>
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">第1022章：伊拉的试炼</h3>
+                                <p class="card-meta">伊拉 · 灵猫一族</p>
+                                <p class="card-desc">伊拉即将迎来成年的试炼，面对强大的对手和内心的恐惧，她能否突破自我，成为真正的灵猫族长？</p>
+                                <div class="card-footer">
+                                    <a href="#" class="read-link">立即阅读 &rarr;</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 4 -->
+                        <article class="comic-card">
+                            <div class="card-cover">
+                                <img src="https://picsum.photos/seed/boy4/300/400" alt="冒险小王子封面">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="card-title">第1021章：重返地球</h3>
+                                <p class="card-meta">全员集结</p>
+                                <p class="card-desc">冒险暂告一段落，于果带着伙伴们回到地球，却发现这里也发生了一些微妙的变化。</p>
+                                <div class="card-footer">
+                                    <a href="#" class="read-link">立即阅读 &rarr;</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Story Introduction -->
+                <section id="intro" class="section" style="margin-top: 60px;">
+                    <div class="section-header">
+                        <h2 class="section-title">剧情简介</h2>
+                    </div>
+                    <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: var(--shadow-sm);">
+                        <p class="intro-text">
+                            《冒险小王子》是一部以“魔法、勇气、成长”为核心主题的奇幻冒险故事。故事的主人公于果，是一个充满好奇心和正义感的普通男孩。为了寻找传说中的精灵星球，他意外与来自不同星球的伙伴们相遇。
+                        </p>
+                        <br>
+                        <p class="intro-text">
+                            在这个广阔的宇宙中，精灵们拥有着各种各样的超能力，而守护精灵星球的责任也落在了于果和他的伙伴们肩上。他们不仅要面对来自邪恶势力的挑战，还要克服内心的恐惧与迷茫。这是一场关于探索未知、守护友谊与实现自我价值的宏大冒险。
+                        </p>
+                        <br>
+                        <p class="intro-text">
+                            全集内容涵盖了精灵星球的历史、各个星系的奇闻异事以及于果与伙伴们之间深厚的羁绊，是一部适合所有年龄层读者阅读的励志漫画。
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside>
+                <!-- Intro Widget -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">关于本站</h3>
+                    <p style="font-size: 0.9rem; color: #666; line-height: 1.6;">
+                        本站致力于提供《冒险小王子》全集的高质量在线阅读体验。我们收录了从早期章节到最新连载的所有内容，并配有详细的角色图鉴和剧情解析，是您了解和重温这部经典作品的最佳平台。
+                    </p>
+                </div>
+
+                <!-- Hot Ranking -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">热门榜单</h3>
+                    <ul class="rank-list">
+                        <li><span class="rank-num">1</span> <a href="#">第1000章：星际穿越</a></li>
+                        <li><span class="rank-num">2</span> <a href="#">第998章：于果觉醒</a></li>
+                        <li><span class="rank-num">3</span> <a href="#">第995章：终极决战</a></li>
+                        <li><span class="rank-num">4</span> <a href="#">第990章：神秘的信物</a></li>
+                        <li><span class="rank-num">5</span> <a href="#">第985章：回归起点</a></li>
+                    </ul>
+                </div>
+
+                <!-- Characters Widget -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">核心角色</h3>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <img src="https://picsum.photos/seed/char1/60/60" alt="于果" style="border-radius: 50%;">
+                        <img src="https://picsum.photos/seed/char2/60/60" alt="伊拉" style="border-radius: 50%;">
+                        <img src="https://picsum.photos/seed/char3/60/60" alt="汤姆" style="border-radius: 50%;">
+                        <img src="https://picsum.photos/seed/char4/60/60" alt="非儿" style="border-radius: 50%;">
+                    </div>
+                    <p style="font-size: 0.8rem; color: #999; margin-top: 10px; text-align: center;">点击头像查看详情</p>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Character Section -->
+        <section class="char-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">主要角色</h2>
+                </div>
+                <div class="char-grid">
+                    <div class="char-item">
+                        <div class="char-avatar">
+                            <img src="https://picsum.photos/seed/yuguo/200/200" alt="于果">
+                        </div>
+                        <div class="char-name">于果</div>
+                        <div class="char-role">主角 / 精灵王继承人</div>
+                    </div>
+                    <div class="char-item">
+                        <div class="char-avatar">
+                            <img src="https://picsum.photos/seed/ila/200/200" alt="伊拉">
+                        </div>
+                        <div class="char-name">伊拉</div>
+                        <div class="char-role">灵猫一族 / 智囊</div>
+                    </div>
+                    <div class="char-item">
+                        <div class="char-avatar">
+                            <img src="https://picsum.photos/seed/tom/200/200" alt="汤姆">
+                        </div>
+                        <div class="char-name">汤姆</div>
+                        <div class="char-role">虚空星系 / 战士</div>
+                    </div>
+                    <div class="char-item">
+                        <div class="char-avatar">
+                            <img src="https://picsum.photos/seed/feier/200/200" alt="非儿">
+                        </div>
+                        <div class="char-name">非儿</div>
+                        <div class="char-role">精灵 / 调查员</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>关于冒险小王子</h3>
+                    <p>一个关于勇气、友谊与成长的奇幻世界。</p>
+                    <p>陪伴无数读者度过美好童年时光的经典IP。</p>
+                </div>
+                <div class="footer-col">
+                    <h3>快速导航</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">漫画首页</a></li>
+                        <li><a href="#">角色图鉴</a></li>
+                        <li><a href="#">周边产品</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>阅读指南</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">阅读条款</a></li>
+                        <li><a href="#">广告合作</a></li>
+                        <li><a href="#">帮助中心</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 冒险小王子全集阅读平台. All Rights Reserved. 本站内容仅供学习交流，请支持正版漫画。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                          </html>
